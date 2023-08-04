@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular500,600,700,800,900);
+
+.title{
+    font-size: 1.5rem;
+    color: #FEFEFE;
+    font-weight: 500;
+    text-align: center;
+}
+table{
+    margin-top: 30px;
+    margin-left: 10px;
+    background:#30313493;
+    padding: 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+input[type=text]{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc85;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #FEFEFE;
+}
+input[type=submit]{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    width: 100%;
+    background-color: rgba(0,93,228,1);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: rgba(0, 91, 228, 0.651);
+
+}
+td{
+    color: #FEFEFE;
+}
