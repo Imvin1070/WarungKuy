@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Warungkuy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -49,5 +49,12 @@ class PageController extends Controller
         $Barang->delete($id);
 
         return redirect()->route('data_barang');
+    }
+    public function index() {
+        if(Auth::user()->role == 'Superadmin'){
+            return redirect()->route("data_barang");
+        } elseif (Auth::user()->role == 'Admin'){
+            return redirect()->route("form");
+        }
     }
 }

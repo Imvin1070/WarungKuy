@@ -1,35 +1,23 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('layout/dashboard');
-});
+Route::get('/', [PageController::class, 'index'])->middleware('auth');
 
-Route::get('/form',[PageController::class, 'form'])->name('form')->middleware('auth.check');
-Route::get('/data', [PageController::class, 'barang_data'])->name('data_barang')->middleware('auth.check');
-Route::get('/page/ubah/{id}',[PageController::class, 'barang_ubah'])->name('ubah_databarang');
-Route::get('/page/hapus/{id}',[PageController::class, 'barang_hapus'])->name('hapus_barang');
+Route::get('/form',[PageController::class, 'form'])->name('form')->middleware('auth','admin')->middleware('auth.check');
+Route::get('/data', [PageController::class, 'barang_data'])->name('data_barang')->middleware('auth')->middleware('auth.check');
+Route::get('/page/ubah/{id}',[PageController::class, 'barang_ubah'])->name('ubah_databarang')->middleware('auth')->middleware('auth.check');
+Route::get('/page/hapus/{id}',[PageController::class, 'barang_hapus'])->name('hapus_barang')->middleware('auth')->middleware('auth.check');
 
-Route::post('/page/form',[PageController::class, 'barang_simpan'])->name('barang_simpan');
-Route::post('/page/perbarui/{id}', [PageController::class, 'barang_perbarui'])->name('perbarui_databarang');
+Route::post('/page/form',[PageController::class, 'barang_simpan'])->name('barang_simpan')->middleware('auth')->middleware('auth.check');
+Route::post('/page/perbarui/{id}', [PageController::class, 'barang_perbarui'])->name('perbarui_databarang')->middleware('auth')->middleware('auth.check');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

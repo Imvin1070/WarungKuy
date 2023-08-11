@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +23,7 @@
             @else
                 <a href="{{ route('login') }}"
                     class="option">Login</a>
-                    <span>/</span>
+                    <span class="opt">/</span>
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}"
                         class="option">Register</a>
@@ -33,7 +32,6 @@
         </div>
     @endif
 
-
     <div class="container">
         <section id="sidebar" class="sidebar active">
             <div class="menu-btn">
@@ -41,7 +39,9 @@
             </div>
             <div class="head">
                 <div class="logo">
-                    <img src="{{ URL::asset('img/IB.jpg') }}" alt="logo">
+                    <a href="/dashboard">
+                        <img src="{{ URL::asset('img/IB.jpg') }}" alt="logo">
+                    </a>
                 </div>
                 <div class="web-details">
                     <p class="title"><span class="title-span">W</span>arungKuy</p>
@@ -51,8 +51,6 @@
             <div class="nav">
                 <div class="menu">
                     <p class="title">Menu</p>
-                    {{-- <i class="fa-solid fa-chevron-right"></i>
-                        <i class="fa-solid fa-chevron-left"></i> --}}
                     <ul>
                         <li>
                             <a href="/">
@@ -94,30 +92,15 @@
                                 <span class="text">Barang Keluar</span>
                             </a>
                         </li>
-                        {{-- <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form> --}}
-
-
                     </ul>
-
                 </div>
             </div>
         </section>
-
         <section id="content">
             @yield('content')
         </section>
-
     </div>
 </body>
-
 </html>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>

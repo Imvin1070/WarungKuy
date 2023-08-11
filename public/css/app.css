@@ -112,6 +112,10 @@ body{
     -moz-border-radius: 0.125rem;
     -ms-border-radius: 0.125rem;
     -o-border-radius: 0.125rem;
+    text-decoration: none;
+}
+.opt{
+    color: #fefefe;
 }
 .option:hover{
     color: #fefefec7;
@@ -182,6 +186,7 @@ body{
     list-style: none;
     margin-bottom: 5px;
     position: relative;
+    cursor: pointer;
 }
 .menu ul li a
 {
@@ -253,13 +258,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #757575;
-    background-color: #fff;
-    border: 2px solid #f6f6f6;
+    color: #a1a1a1;
+    background-color: rgba(0,93,228,1);
+    border: 2px solid rgba(0,93,228,1);
     cursor: pointer;
 }
 .menu-btn:hover i{
-    color: rgba(0,93,228,1);
+    color: #e9e9e9;
 }
 .menu-btn i{
     transition: all 0.3s;

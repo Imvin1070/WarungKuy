@@ -16,6 +16,19 @@ body{
     background: rgb(0,93,228);
     background: linear-gradient(61deg, rgba(0,93,228,1) 0%, rgba(7,19,25,1) 50%, rgba(7,19,25,1) 100%);
 }
+.fa-arrow-left{
+    color: #f8f8f8;
+    margin-left: 30px;
+    margin-top: 30px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.fa-arrow-left:hover{
+    color: #72787f;
+}
 .container{
     float: right;
     padding: 25px;

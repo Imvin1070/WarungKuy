@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ URL::asset('css/auth.css/signup.css') }}">
     <title>Sign Up</title>
 </head>
 
 <body>
     <form method="POST" action="{{ route('register') }}">
+        <a href="/">
+            <i class="fas fa-arrow-left fa-lg"></i>
+        </a>
         @csrf
         <div class="container">
             <h4>Create new account <span>.</span></h4>

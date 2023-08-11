@@ -16,18 +16,6 @@ body{
     background: rgb(0,93,228);
     background: linear-gradient(61deg, rgba(0,93,228,1) 0%, rgba(7,19,25,1) 50%, rgba(7,19,25,1) 100%);
 }
-.container{
-    float: right;
-    padding: 25px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    width: 50%;
-    height: 100%;
-    margin-top: 100px;
-}
 .fa-arrow-left{
     color: #f8f8f8;
     margin-left: 30px;
@@ -41,16 +29,41 @@ body{
 .fa-arrow-left:hover{
     color: #72787f;
 }
+.container{
+    padding: 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    height: 100%;
+    margin-top: 160px;
+    margin: auto;
+    width: 60%;
+}
 .wrapper{
     margin-top: 25px;
+    margin: auto;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-h4{
-    color: rgb(255, 255, 255);
+p{
+    color: rgba(255, 255, 255, 0.699);
     text-align: left;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align:center;
+    margin-top: 140px;
 }
 span{
-    color: #005DE4;
+    margin-left: 20px;
+    font-size: 14px;
 }
 .wrapp{
     margin-top: 5px;
@@ -78,27 +91,20 @@ input::placeholder{
     color: #72787f;
     font-size: 14px;
 }
-.btn-signup{
+.btn-resetpw{
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
     background-color: #005DE4;
-    color: white;
+    color: rgba(255, 255, 255, 0.863);
     padding: 10px 15px;
     margin: 10px 0;
     border: none;
     cursor: pointer;
-    width: 300px;
+    width: 250px;
 }
-.btn-signup:hover{
+.btn-resetpw:hover{
     background-color: #005be4bb;
-}
-.btn-signin{
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    color: #72787f;
-    font-size: 13px;
 }
